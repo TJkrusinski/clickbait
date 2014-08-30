@@ -1,0 +1,35 @@
+{
+  "name": "clickbait",
+  "version": "1.0.0",
+  "description": "Classify a string as click bait or not",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TJkrusinski/clickbait.git"
+  },
+  "keywords": [
+    "click",
+    "bait",
+    "spam",
+    "clickbait"
+  ],
+  "author": "TJ Krusinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TJkrusinski/clickbait/issues"
+  },
+  "homepage": "https://github.com/TJkrusinski/clickbait",
+  "dependencies": {
+    "classifier": "^0.1.0",
+    "clickhole-headlines": "^1.0.1",
+    "feedtitles": "^1.0.0",
+    "natural": "^0.1.28",
+    "redis": "^0.12.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1"
+  }
+}
