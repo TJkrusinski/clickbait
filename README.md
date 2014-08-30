@@ -24,6 +24,9 @@ clickbait.on('ready', function(){
   clickbait.bait('12 amazing photos of cute dogs');
   // => "spam"
 
+  clickbait.bait('Obama to deploy troops to middle east');
+  // => "not"
+
 });
 ```
 
