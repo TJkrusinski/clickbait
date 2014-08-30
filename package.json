@@ -1,6 +1,6 @@
 {
   "name": "clickbait",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Classify a string as click bait or not",
   "main": "index.js",
   "scripts": {
