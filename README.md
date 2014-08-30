@@ -25,6 +25,7 @@ clickbait.on('ready', function(){
   // => "spam"
 
 });
+```
 
 ## Tests
 
