@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/TJkrusinski/clickbait",
   "dependencies": {
+    "buzzfeed-headlines": "^1.0.0",
     "classifier": "^0.1.0",
     "clickhole-headlines": "^1.0.1",
     "feedtitles": "^1.0.0",
