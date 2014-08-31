@@ -2,6 +2,7 @@
 
 var events = require('events');
 var clickhole = require('clickhole-headlines');
+var buzzfeed = require('buzzfeed-headlines');
 var Feedtitles = require('feedtitles');
 var classifier = require('./lib/classifier')();
 
@@ -18,13 +19,14 @@ var ready = false;
 var exports = module.exports = Object.create(events.EventEmitter.prototype);
 
 /**
- *  Go get some clickhole garbage and start trainging
+ *  Go get some clickhole and buzzfeed garbage and start training
  */
 
 clickhole(train, 10);
+buzzfeed(train);
 
 /**
- *  Our train function for clickhole
+ *  Our train function for the sites
  *
  *  @param {Boolean} err
  *  @parma {Array} titles
@@ -37,8 +39,18 @@ function train(err, titles) {
     classifier.addDocument(title, 'spam');
   });
 
-  // we're calling ready here because clickhole is going to take longer
-  // than the rss feeds will
+  done();
+};
+
+/**
+ *  We know we are waiting for 3 sources to finish, do that here
+ */
+
+var counts = 0;
+
+function done() {
+  counts++;
+  if (counts < 2) return;
   ready = true;
   classifier.train();
   exports.emit('ready');
